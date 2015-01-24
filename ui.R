@@ -2,9 +2,12 @@ library(shiny)
 
 shinyUI(
   pageWithSidebar(
-    headerPanel("Diamond Price Forecast"),
+    headerPanel("Diamond Price Forecast Model"),
     
     sidebarPanel(
+      p("Please make selections for the 4 c's of the diamond of your choce.
+  This will result in a forecasted price to the right.  Note that default values have been provided.  Happy Picking!"),
+      
       numericInput(inputId = 'numCarat', label = 'Carats', value =  1.0, min = 0.5, max = 5, step = 0.1),
       
       radioButtons(inputId = "radioCut", label = "Cut",
